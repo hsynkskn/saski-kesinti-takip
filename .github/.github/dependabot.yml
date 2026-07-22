@@ -1,0 +1,28 @@
+version: 2
+updates:
+  # Python paketleri (requirements.txt) için
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"        # Haftalık kontrol
+      time: "10:00"             # UTC saat 10:00
+      day: "monday"             # Pazartesi
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "pip"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+  # GitHub Actions için
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "10:00"
+      day: "monday"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github-actions"
