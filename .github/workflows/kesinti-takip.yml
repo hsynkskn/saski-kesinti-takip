@@ -2,7 +2,7 @@ name: SASKİ ÇAY MAH. Kesinti Takip
 
 on:
   schedule:
-    - cron: '0 3,6,9,12,15,18,21 * * *'
+    - cron: '0 * * * *'    # HER SAAT BAŞI (00, 01, 02, ..., 23)
   workflow_dispatch:
 
 jobs:
