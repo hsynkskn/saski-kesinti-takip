@@ -29,8 +29,3 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         run: python saski_kesinti_takip.py
-
-      - name: State Dosyasını Kaydet
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update son_durum.json"
