@@ -2,12 +2,14 @@ name: SASKİ ÇAY MAH. Kesinti Takip
 
 on:
   schedule:
-    - cron: '0 3,6,9,12,15,18,21 * * *'   # UTC saatleri
+    - cron: '0 3,6,9,12,15,18,21 * * *'
   workflow_dispatch:
 
 jobs:
   check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Repoyu Çek
@@ -29,9 +31,3 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         run: python saski_kesinti_takip.py
-
-      # Opsiyonel: State dosyasını GitHub'a kaydet (istiyorsan aç)
-      # - name: State Dosyasını Kaydet
-      #   uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: "Update son_durum.json"
