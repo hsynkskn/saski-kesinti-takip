@@ -28,7 +28,7 @@ Bot, **GitHub Actions** ile bilgisayarınız kapalıyken bile 3 saatte bir kontr
 
 ## Kurulum
 
-### 1. Repoyu Klonla
+###1. Repoyu Klonla
 ```bash
 git clone https://github.com/kullanicin/saski-kesinti-takip.git
 cd saski-kesinti-takip
