@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import time
 import json
 import smtplib
 import os
@@ -18,7 +17,6 @@ EMAIL_TO = os.getenv("EMAIL_TO")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 STATE_FILE = "son_durum.json"
-
 # ==================================================
 
 def load_state():
@@ -35,7 +33,9 @@ def save_state(state):
         json.dump(state, f, ensure_ascii=False, indent=2)
 
 def get_page_content():
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    }
     try:
         response = requests.get(URL, headers=headers, timeout=20)
         response.raise_for_status()
@@ -47,11 +47,35 @@ def get_page_content():
 def parse_kesintiler(html):
     soup = BeautifulSoup(html, 'html.parser')
     kesintiler = []
-    for text in soup.find_all(string=True):
-        clean = " ".join(text.split())
-        if ILCE in clean and MAHALLE in clean and len(clean) > 30:
-            if clean not in kesintiler:
-                kesintiler.append(clean)
+
+    # Tabloyu bul
+    table = soup.find('table')
+    if not table:
+        return kesintiler
+
+    rows = table.find_all('tr')
+    
+    for row in rows[1:]:  # başlık satırını atla
+        cols = row.find_all('td')
+        if len(cols) < 4:
+            continue
+
+        baslangic = cols[0].get_text(strip=True)
+        bitis = cols[1].get_text(strip=True)
+        nedeni = cols[2].get_text(strip=True)
+        etkilenen = cols[3].get_text(strip=True)
+
+        # Sadece ÇARŞAMBA + ÇAY MAH içeren satırları al
+        if ILCE in etkilenen and MAHALLE in etkilenen:
+            kayit = {
+                "baslangic": baslangic,
+                "bitis": bitis,
+                "nedeni": nedeni,
+                "etkilenen": etkilenen,
+                "unique_id": f"{baslangic}|{bitis}|{nedeni}|{etkilenen}"
+            }
+            kesintiler.append(kayit)
+
     return kesintiler
 
 def send_email(yeni_kesintiler, toplam_kesinti, toplam_guncelleme):
@@ -70,7 +94,13 @@ def send_email(yeni_kesintiler, toplam_kesinti, toplam_guncelleme):
 Detaylar:
 """
     for i, k in enumerate(yeni_kesintiler, 1):
-        body += f"\n{i}. {k}\n"
+        body += f"""
+{i}. 
+   • Başlangıç      : {k['baslangic']}
+   • Bitiş          : {k['bitis']}
+   • Nedeni         : {k['nedeni']}
+   • Etkilenen Yerler: {k['etkilenen']}
+"""
     
     msg = MIMEMultipart()
     msg['From'] = EMAIL_FROM
@@ -91,7 +121,6 @@ Detaylar:
 def check_kesinti():
     print(f"\n🔍 [UTC {datetime.utcnow().strftime('%d.%m.%Y %H:%M:%S')}] Site kontrol ediliyor...")
     
-    # State dosyasını garanti et
     if not os.path.exists(STATE_FILE):
         save_state({"kesintiler": [], "toplam_kesinti": 0, "guncellemeler": 0})
     
@@ -103,10 +132,19 @@ def check_kesinti():
     current_kesintiler = parse_kesintiler(html)
     state = load_state()
     
-    yeni_kesintiler = [k for k in current_kesintiler if k not in state["kesintiler"]]
+    # Daha önce kaydedilmiş unique_id'leri al
+    eski_idler = set(state.get("kesintiler", []))
+    
+    yeni_kesintiler = []
+    for k in current_kesintiler:
+        if k["unique_id"] not in eski_idler:
+            yeni_kesintiler.append(k)
     
     if yeni_kesintiler:
-        state["kesintiler"].extend(yeni_kesintiler)
+        # Yeni id'leri kaydet
+        for k in yeni_kesintiler:
+            state["kesintiler"].append(k["unique_id"])
+        
         state["toplam_kesinti"] = len(state["kesintiler"])
         state["guncellemeler"] += len(yeni_kesintiler)
         save_state(state)
