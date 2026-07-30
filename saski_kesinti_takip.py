@@ -26,7 +26,11 @@ def load_state():
                 return json.load(f)
         except:
             pass
-    return {"kesintiler": [], "toplam_kesinti": 0, "guncellemeler": 0}
+    return {
+        "kesintiler": {},          # key: stable_id → detaylar
+        "toplam_kesinti": 0,
+        "guncellemeler": 0
+    }
 
 def save_state(state):
     with open(STATE_FILE, 'w', encoding='utf-8') as f:
@@ -48,7 +52,6 @@ def parse_kesintiler(html):
     soup = BeautifulSoup(html, 'html.parser')
     kesintiler = []
 
-    # Tabloyu bul
     table = soup.find('table')
     if not table:
         return kesintiler
@@ -67,23 +70,29 @@ def parse_kesintiler(html):
 
         # Sadece ÇARŞAMBA + ÇAY MAH içeren satırları al
         if ILCE in etkilenen and MAHALLE in etkilenen:
+            # Bitiş saati değişse bile aynı kesintiyi tanımak için stable key
+            stable_id = f"{baslangic}|{nedeni}|{etkilenen}"
+            
             kayit = {
                 "baslangic": baslangic,
                 "bitis": bitis,
                 "nedeni": nedeni,
                 "etkilenen": etkilenen,
-                "unique_id": f"{baslangic}|{bitis}|{nedeni}|{etkilenen}"
+                "stable_id": stable_id
             }
             kesintiler.append(kayit)
 
     return kesintiler
 
-def send_email(yeni_kesintiler, toplam_kesinti, toplam_guncelleme):
-    subject = f"🚨 SASKİ ÇAY MAH. - {len(yeni_kesintiler)} Yeni Duyuru"
+def send_email(yeni_veya_guncel, toplam_kesinti, toplam_guncelleme, is_update=False):
+    if is_update:
+        subject = f"🔄 SASKİ ÇAY MAH. - Bitiş Saati Güncellendi ({len(yeni_veya_guncel)} adet)"
+    else:
+        subject = f"🚨 SASKİ ÇAY MAH. - Yeni Kesinti ({len(yeni_veya_guncel)} adet)"
     
     body = f"""Merhaba,
 
-ÇARŞAMBA ilçesi ÇAY MAH. için yeni su kesintisi / güncelleme tespit edildi!
+ÇARŞAMBA ilçesi ÇAY MAH. için {'bitiş saati güncellendi' if is_update else 'yeni su kesintisi'} tespit edildi!
 
 📊 Toplam İstatistik:
 • Toplam Kesinti    : {toplam_kesinti}
@@ -93,12 +102,12 @@ def send_email(yeni_kesintiler, toplam_kesinti, toplam_guncelleme):
 
 Detaylar:
 """
-    for i, k in enumerate(yeni_kesintiler, 1):
+    for i, k in enumerate(yeni_veya_guncel, 1):
         body += f"""
 {i}. 
-   • Başlangıç      : {k['baslangic']}
-   • Bitiş          : {k['bitis']}
-   • Nedeni         : {k['nedeni']}
+   • Başlangıç       : {k['baslangic']}
+   • Bitiş           : {k['bitis']}
+   • Nedeni          : {k['nedeni']}
    • Etkilenen Yerler: {k['etkilenen']}
 """
     
@@ -122,7 +131,11 @@ def check_kesinti():
     print(f"\n🔍 [UTC {datetime.utcnow().strftime('%d.%m.%Y %H:%M:%S')}] Site kontrol ediliyor...")
     
     if not os.path.exists(STATE_FILE):
-        save_state({"kesintiler": [], "toplam_kesinti": 0, "guncellemeler": 0})
+        save_state({
+            "kesintiler": {},
+            "toplam_kesinti": 0,
+            "guncellemeler": 0
+        })
     
     html = get_page_content()
     if not html:
@@ -132,29 +145,50 @@ def check_kesinti():
     current_kesintiler = parse_kesintiler(html)
     state = load_state()
     
-    # Daha önce kaydedilmiş unique_id'leri al
-    eski_idler = set(state.get("kesintiler", []))
-    
     yeni_kesintiler = []
-    for k in current_kesintiler:
-        if k["unique_id"] not in eski_idler:
-            yeni_kesintiler.append(k)
+    guncellenen_kesintiler = []
     
-    if yeni_kesintiler:
-        # Yeni id'leri kaydet
-        for k in yeni_kesintiler:
-            state["kesintiler"].append(k["unique_id"])
+    for k in current_kesintiler:
+        sid = k["stable_id"]
         
+        if sid not in state["kesintiler"]:
+            # Tamamen yeni kesinti
+            yeni_kesintiler.append(k)
+            state["kesintiler"][sid] = {
+                "baslangic": k["baslangic"],
+                "bitis": k["bitis"],
+                "nedeni": k["nedeni"],
+                "etkilenen": k["etkilenen"]
+            }
+        else:
+            # Daha önce kaydedilmiş
+            eski_bitis = state["kesintiler"][sid]["bitis"]
+            
+            if eski_bitis != k["bitis"]:
+                # Bitiş saati değişmiş → güncelleme maili at
+                guncellenen_kesintiler.append(k)
+                state["kesintiler"][sid]["bitis"] = k["bitis"]
+            # else: bitiş aynı → hiçbir şey yapma (tekrar mail atma)
+    
+    # Yeni kesintiler varsa mail at
+    if yeni_kesintiler:
         state["toplam_kesinti"] = len(state["kesintiler"])
         state["guncellemeler"] += len(yeni_kesintiler)
         save_state(state)
-        
-        print(f"🚨 {len(yeni_kesintiler)} YENİ duyuru bulundu! Mail gönderiliyor...")
-        send_email(yeni_kesintiler, state["toplam_kesinti"], state["guncellemeler"])
-    else:
-        print(f"✅ Yeni duyuru yok. ({len(current_kesintiler)} ilgili kayıt tarandı)\n")
+        print(f"🚨 {len(yeni_kesintiler)} YENİ kesinti bulundu!")
+        send_email(yeni_kesintiler, state["toplam_kesinti"], state["guncellemeler"], is_update=False)
+    
+    # Bitiş saati değişenler varsa mail at
+    if guncellenen_kesintiler:
+        state["guncellemeler"] += len(guncellenen_kesintiler)
+        save_state(state)
+        print(f"🔄 {len(guncellenen_kesintiler)} kesintinin bitiş saati güncellendi!")
+        send_email(guncellenen_kesintiler, state["toplam_kesinti"], state["guncellemeler"], is_update=True)
+    
+    if not yeni_kesintiler and not guncellenen_kesintiler:
+        print(f"✅ Yeni veya güncellenen duyuru yok. ({len(current_kesintiler)} ilgili kayıt tarandı)\n")
 
 # ===================== ANA KISIM =====================
 if __name__ == "__main__":
-    print("=== SASKİ ÇAY MAH. Su Kesintisi Takip Botu (GitHub Actions) ===\n")
+    print("=== SASKİ ÇAY MAH. Su Kesintisi Takip Botu ===\n")
     check_kesinti()
