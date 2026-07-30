@@ -1,0 +1,12 @@
+{
+  "kesintiler": {
+    "30 Temmuz 09:00|ŞEBEKE BAĞLANTI ÇALIŞMALARI|ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. / ,ÇARŞAMBA / YAMANLI MAH. /": {
+      "baslangic": "30 Temmuz 09:00",
+      "bitis": "30 Temmuz 16:00",
+      "nedeni": "ŞEBEKE BAĞLANTI ÇALIŞMALARI",
+      "etkilenen": "ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. / ,ÇARŞAMBA / YAMANLI MAH. /"
+    }
+  },
+  "toplam_kesinti": 1,
+  "guncellemeler": 1
+}
