@@ -5,8 +5,14 @@
       "bitis": "30 Temmuz 16:00",
       "nedeni": "ŞEBEKE BAĞLANTI ÇALIŞMALARI",
       "etkilenen": "ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. / ,ÇARŞAMBA / YAMANLI MAH. /"
+    },
+    "02 Ağustos 20:00|ANA ŞEBEKE ARIZASI|ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / SARICALI MAH. /": {
+      "baslangic": "02 Ağustos 20:00",
+      "bitis": "02 Ağustos 22:00",
+      "nedeni": "ANA ŞEBEKE ARIZASI",
+      "etkilenen": "ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / SARICALI MAH. /"
     }
   },
-  "toplam_kesinti": 1,
-  "guncellemeler": 1
+  "toplam_kesinti": 2,
+  "guncellemeler": 2
 }
