@@ -11,8 +11,14 @@
       "bitis": "02 Ağustos 22:00",
       "nedeni": "ANA ŞEBEKE ARIZASI",
       "etkilenen": "ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / SARICALI MAH. /"
+    },
+    "03 Ağustos 09:00|ANA ŞEBEKE ARIZASI|ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / SARICALI MAH. /": {
+      "baslangic": "03 Ağustos 09:00",
+      "bitis": "03 Ağustos 11:00",
+      "nedeni": "ANA ŞEBEKE ARIZASI",
+      "etkilenen": "ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / SARICALI MAH. /"
     }
   },
-  "toplam_kesinti": 2,
-  "guncellemeler": 2
+  "toplam_kesinti": 3,
+  "guncellemeler": 3
 }
