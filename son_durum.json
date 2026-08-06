@@ -23,8 +23,14 @@
       "bitis": "04 Ağustos 18:00",
       "nedeni": "DAĞITICI KAYNAKLI ELEKTRİK KESİNTİSİ",
       "etkilenen": "ÇARŞAMBA / AĞCAGÜNEY MAH. / ,ÇARŞAMBA / AŞAĞI MUSALLA MAH. / ,ÇARŞAMBA / ESENÇAY MAH. / ,ÇARŞAMBA / EĞRİDERE MAH. / ,ÇARŞAMBA / DEYİNCEK MAH. / ,ÇARŞAMBA / GÜLDERE MAH. / ,ÇARŞAMBA / GÜLÖREN MAH. / ,ÇARŞAMBA / KONUKLUK MAH. / ,ÇARŞAMBA / KABACEVİZ MAH. / ,ÇARŞAMBA / KOLDERE MAH. / ,ÇARŞAMBA / PORSUK MAH. / ,ÇARŞAMBA / ULUPINAR MAH. / ,ÇARŞAMBA / YEŞİLDERE MAH. / ,ÇARŞAMBA / YUKARI AĞCAGÜNEY MAH. /"
+    },
+    "06 Ağustos 09:00|DAĞITICI KAYNAKLI ELEKTRİK KESİNTİSİ|ÇARŞAMBA / AĞCAGÜNEY MAH. / ,ÇARŞAMBA / AŞAĞI MUSALLA MAH. / ,ÇARŞAMBA / ESENTEPE MAH. / ,ÇARŞAMBA / ESENÇAY MAH. / ,ÇARŞAMBA / EĞRİDERE MAH. / ,ÇARŞAMBA / DEYİNCEK MAH. / ,ÇARŞAMBA / GÜLDERE MAH. / ,ÇARŞAMBA / GÜLÖREN MAH. / ,ÇARŞAMBA / KONUKLUK MAH. / ,ÇARŞAMBA / KABACEVİZ MAH. / ,ÇARŞAMBA / KOLDERE MAH. / ,ÇARŞAMBA / PORSUK MAH. / ,ÇARŞAMBA / ULUPINAR / ,ÇARŞAMBA / YEŞİLDERE MAH. / ,ÇARŞAMBA / YUKARI AĞCAGÜNEY MAH. /": {
+      "baslangic": "06 Ağustos 09:00",
+      "bitis": "06 Ağustos 18:00",
+      "nedeni": "DAĞITICI KAYNAKLI ELEKTRİK KESİNTİSİ",
+      "etkilenen": "ÇARŞAMBA / AĞCAGÜNEY MAH. / ,ÇARŞAMBA / AŞAĞI MUSALLA MAH. / ,ÇARŞAMBA / ESENTEPE MAH. / ,ÇARŞAMBA / ESENÇAY MAH. / ,ÇARŞAMBA / EĞRİDERE MAH. / ,ÇARŞAMBA / DEYİNCEK MAH. / ,ÇARŞAMBA / GÜLDERE MAH. / ,ÇARŞAMBA / GÜLÖREN MAH. / ,ÇARŞAMBA / KONUKLUK MAH. / ,ÇARŞAMBA / KABACEVİZ MAH. / ,ÇARŞAMBA / KOLDERE MAH. / ,ÇARŞAMBA / PORSUK MAH. / ,ÇARŞAMBA / ULUPINAR / ,ÇARŞAMBA / YEŞİLDERE MAH. / ,ÇARŞAMBA / YUKARI AĞCAGÜNEY MAH. /"
     }
   },
-  "toplam_kesinti": 4,
-  "guncellemeler": 4
+  "toplam_kesinti": 5,
+  "guncellemeler": 5
 }
