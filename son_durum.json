@@ -35,8 +35,20 @@
       "bitis": "20 Ağustos 16:00",
       "nedeni": "ALTYAPI ÇALIŞMASI ( SU )",
       "etkilenen": "ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. /"
+    },
+    "20 Ağustos 09:00|ALTYAPI ÇALIŞMASI ( SU )|ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. /": {
+      "baslangic": "20 Ağustos 09:00",
+      "bitis": "20 Ağustos 21:00",
+      "nedeni": "ALTYAPI ÇALIŞMASI ( SU )",
+      "etkilenen": "ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. /"
+    },
+    "20 Ağustos 09:00|ALTYAPI ÇALIŞMASI ( SU )|ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. /": {
+      "baslangic": "20 Ağustos 09:00",
+      "bitis": "20 Ağustos 21:00",
+      "nedeni": "ALTYAPI ÇALIŞMASI ( SU )",
+      "etkilenen": "ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. /"
     }
   },
-  "toplam_kesinti": 6,
-  "guncellemeler": 6
+  "toplam_kesinti": 8,
+  "guncellemeler": 8
 }
