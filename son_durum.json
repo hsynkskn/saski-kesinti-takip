@@ -59,8 +59,14 @@
       "bitis": "09 Eylül 12:00",
       "nedeni": "ALTYAPI ÇALIŞMASI ( SU )",
       "etkilenen": "ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. / ,ÇARŞAMBA / YAMANLI MAH. /"
+    },
+    "09 Eylül 18:00|ANA ŞEBEKE ARIZASI|ÇARŞAMBA / KİRAZLIKÇAY MAH. /": {
+      "baslangic": "09 Eylül 18:00",
+      "bitis": "09 Eylül 21:00",
+      "nedeni": "ANA ŞEBEKE ARIZASI",
+      "etkilenen": "ÇARŞAMBA / KİRAZLIKÇAY MAH. /"
     }
   },
-  "toplam_kesinti": 10,
-  "guncellemeler": 10
+  "toplam_kesinti": 11,
+  "guncellemeler": 11
 }
