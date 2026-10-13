@@ -65,8 +65,14 @@
       "bitis": "09 Eylül 21:00",
       "nedeni": "ANA ŞEBEKE ARIZASI",
       "etkilenen": "ÇARŞAMBA / KİRAZLIKÇAY MAH. /"
+    },
+    "13 Ekim 11:00|ANA ŞEBEKE ARIZASI|ÇARŞAMBA / KİRAZLIKÇAY MAH. /": {
+      "baslangic": "13 Ekim 11:00",
+      "bitis": "13 Ekim 13:00",
+      "nedeni": "ANA ŞEBEKE ARIZASI",
+      "etkilenen": "ÇARŞAMBA / KİRAZLIKÇAY MAH. /"
     }
   },
-  "toplam_kesinti": 11,
-  "guncellemeler": 11
+  "toplam_kesinti": 12,
+  "guncellemeler": 12
 }
