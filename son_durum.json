@@ -71,8 +71,14 @@
       "bitis": "13 Ekim 13:00",
       "nedeni": "ANA ŞEBEKE ARIZASI",
       "etkilenen": "ÇARŞAMBA / KİRAZLIKÇAY MAH. /"
+    },
+    "15 Ekim 09:00|ALTYAPI ÇALIŞMASI ( SU )|ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. /": {
+      "baslangic": "15 Ekim 09:00",
+      "bitis": "15 Ekim 15:00",
+      "nedeni": "ALTYAPI ÇALIŞMASI ( SU )",
+      "etkilenen": "ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. /"
     }
   },
-  "toplam_kesinti": 12,
-  "guncellemeler": 12
+  "toplam_kesinti": 13,
+  "guncellemeler": 13
 }
