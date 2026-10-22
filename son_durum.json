@@ -77,8 +77,14 @@
       "bitis": "15 Ekim 15:00",
       "nedeni": "ALTYAPI ÇALIŞMASI ( SU )",
       "etkilenen": "ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. /"
+    },
+    "22 Ekim 09:00|ALTYAPI ÇALIŞMASI ( SU )|ÇARŞAMBA / ÇAY MAH. /": {
+      "baslangic": "22 Ekim 09:00",
+      "bitis": "22 Ekim 13:00",
+      "nedeni": "ALTYAPI ÇALIŞMASI ( SU )",
+      "etkilenen": "ÇARŞAMBA / ÇAY MAH. /"
     }
   },
-  "toplam_kesinti": 13,
-  "guncellemeler": 13
+  "toplam_kesinti": 14,
+  "guncellemeler": 14
 }
