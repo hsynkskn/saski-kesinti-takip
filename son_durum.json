@@ -95,8 +95,14 @@
       "bitis": "04 Kasım 18:00",
       "nedeni": "YEDAŞ ELEKTRİK ARIZASINDAN KAYNAKLI SU KESİNTİSİ",
       "etkilenen": "ÇARŞAMBA / AĞCAGÜNEY MAH. / ,ÇARŞAMBA / ESENTEPE MAH. / ,ÇARŞAMBA / ESENÇAY MAH. / ,ÇARŞAMBA / EĞRİDERE MAH. / ,ÇARŞAMBA / GÜLÖREN MAH. / ,ÇARŞAMBA / GÜLDERE MAH. / ,ÇARŞAMBA / KARAKAYA MAH. / ,ÇARŞAMBA / KABACEVİZ MAH. / ,ÇARŞAMBA / KÖROĞLU MAH. / ,ÇARŞAMBA / PORSUK MAH. / ,ÇARŞAMBA / ULUPINAR MAH. / ,ÇARŞAMBA / YEŞİLDERE MAH. / ,ÇARŞAMBA / YUKARI AĞCAGÜNEY MAH. /"
+    },
+    "12 Kasım 09:00|ABONE HATTI ARIZASI|ÇARŞAMBA / ALİ FUAT BAŞGİL MAH. / ,ÇARŞAMBA / BEYLERCE MAH. / ,ÇARŞAMBA / BEYYENİCE MAH. / ,ÇARŞAMBA / CUMHURİYET MAH. / ,ÇARŞAMBA / GAZİ MAH. / ,ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / KİRAZBUCAĞI MAH. / ,ÇARŞAMBA / SUNGURLU MAH. / ,ÇARŞAMBA / SARICALI MAH. / ,ÇARŞAMBA / HACILIÇAY MAH. / ,ÇARŞAMBA / UMUT MAH. / ,ÇARŞAMBA / ÜÇKÖPRÜ MAH. / ,ÇARŞAMBA / YEŞİLIRMAK MAH. / ,ÇARŞAMBA / YENİ KÖSELİ MAH. /": {
+      "baslangic": "12 Kasım 09:00",
+      "bitis": "12 Kasım 16:00",
+      "nedeni": "ABONE HATTI ARIZASI",
+      "etkilenen": "ÇARŞAMBA / ALİ FUAT BAŞGİL MAH. / ,ÇARŞAMBA / BEYLERCE MAH. / ,ÇARŞAMBA / BEYYENİCE MAH. / ,ÇARŞAMBA / CUMHURİYET MAH. / ,ÇARŞAMBA / GAZİ MAH. / ,ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / KİRAZBUCAĞI MAH. / ,ÇARŞAMBA / SUNGURLU MAH. / ,ÇARŞAMBA / SARICALI MAH. / ,ÇARŞAMBA / HACILIÇAY MAH. / ,ÇARŞAMBA / UMUT MAH. / ,ÇARŞAMBA / ÜÇKÖPRÜ MAH. / ,ÇARŞAMBA / YEŞİLIRMAK MAH. / ,ÇARŞAMBA / YENİ KÖSELİ MAH. /"
     }
   },
-  "toplam_kesinti": 16,
-  "guncellemeler": 16
+  "toplam_kesinti": 17,
+  "guncellemeler": 17
 }
