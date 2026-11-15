@@ -101,8 +101,14 @@
       "bitis": "12 Kasım 16:00",
       "nedeni": "ABONE HATTI ARIZASI",
       "etkilenen": "ÇARŞAMBA / ALİ FUAT BAŞGİL MAH. / ,ÇARŞAMBA / BEYLERCE MAH. / ,ÇARŞAMBA / BEYYENİCE MAH. / ,ÇARŞAMBA / CUMHURİYET MAH. / ,ÇARŞAMBA / GAZİ MAH. / ,ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / KİRAZBUCAĞI MAH. / ,ÇARŞAMBA / SUNGURLU MAH. / ,ÇARŞAMBA / SARICALI MAH. / ,ÇARŞAMBA / HACILIÇAY MAH. / ,ÇARŞAMBA / UMUT MAH. / ,ÇARŞAMBA / ÜÇKÖPRÜ MAH. / ,ÇARŞAMBA / YEŞİLIRMAK MAH. / ,ÇARŞAMBA / YENİ KÖSELİ MAH. /"
+    },
+    "16 Kasım 00:01|ANA ŞEBEKE ARIZASI|ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. /": {
+      "baslangic": "16 Kasım 00:01",
+      "bitis": "16 Kasım 06:00",
+      "nedeni": "ANA ŞEBEKE ARIZASI",
+      "etkilenen": "ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / AŞAĞI DONURLU MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. /"
     }
   },
-  "toplam_kesinti": 17,
-  "guncellemeler": 17
+  "toplam_kesinti": 18,
+  "guncellemeler": 18
 }
