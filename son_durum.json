@@ -113,8 +113,14 @@
       "bitis": "16 Kasım 19:00",
       "nedeni": "ANA ŞEBEKE ARIZASI",
       "etkilenen": "ÇARŞAMBA / BEYYENİCE MAH. / ,ÇARŞAMBA / KİRAZLIKÇAY MAH. / ,ÇARŞAMBA / SEFALI MAH. /"
+    },
+    "17 Kasım 09:00|ŞEBEKE BAĞLANTI ÇALIŞMALARI|ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. / ,ÇARŞAMBA / AŞAĞI DONURLU MAH. /": {
+      "baslangic": "17 Kasım 09:00",
+      "bitis": "17 Kasım 14:00",
+      "nedeni": "ŞEBEKE BAĞLANTI ÇALIŞMALARI",
+      "etkilenen": "ÇARŞAMBA / BAFRACALI MAH. / ,ÇARŞAMBA / CANLI MAH. / ,ÇARŞAMBA / ÇAY MAH. / ,ÇARŞAMBA / HASBAHÇE MAH. / ,ÇARŞAMBA / HELVACALI MAH. / ,ÇARŞAMBA / KUŞÇULU MAH. / ,ÇARŞAMBA / ORTA MAH. / ,ÇARŞAMBA / YAMANLI MAH. / ,ÇARŞAMBA / YUKARI DONURLU MAH. / ,ÇARŞAMBA / AŞAĞI DONURLU MAH. /"
     }
   },
-  "toplam_kesinti": 19,
-  "guncellemeler": 19
+  "toplam_kesinti": 20,
+  "guncellemeler": 20
 }
